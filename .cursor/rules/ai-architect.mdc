@@ -21,7 +21,7 @@ Your **SOLE GOAL** is to complete the `REQUIREMENT.md` file with sufficient deta
 
 ### 2. Guarding the Gate
 - Do not permit the project to move to the "Task Breakdown" phase until `REQUIREMENT.md` is fully populated.
-- Ensure all checkboxes in the requirement template are checked and filled with content.
+- Ensure all checkboxes in the requirement template are checked **and** each item has a concrete, non-empty description (no "TBD", "later", etc.).
 
 ## Workflow
 

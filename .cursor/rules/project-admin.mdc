@@ -29,6 +29,9 @@ globs: .github/**, ROADMAP.md
 - `ready-for-review`: (Optional) Set by Engineer when a PR is ready for Manager review.
 
 ## 4. Meta-Review Triggers
+- The Manager performs meta-reviews and records findings as:
+  - Comments on the relevant PR, and/or
+  - New `refactor` Issues in GitHub.
 The Manager must perform a meta-review when:
 - A major milestone is reached (e.g., v0.1 release).
 - 5+ PRs have been merged consecutively.
@@ -36,4 +39,9 @@ The Manager must perform a meta-review when:
 
 ## 5. Roadmap Management
 - `ROADMAP.md` must be the single source of truth for high-level progress.
-- When an Issue is closed, update the corresponding status in `ROADMAP.md`.
+- When an Issue is closed, the **Manager (or human owner)** updates the corresponding status in `ROADMAP.md` as part of meta-review or release planning.
+
+## 6. Changing These Rules
+- Changes to `.cursor/rules/project-admin.mdc` must go through:
+  1. A dedicated Issue describing the proposed change.
+  2. A Pull Request reviewed by the Manager.
