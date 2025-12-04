@@ -19,10 +19,10 @@ mermaid の flowchart で記述する (UML コンポーネント図/配置図の
 
 ```mermaid
 flowchart LR
-  %% ここにプロジェクト固有のコンポーネント構成を記述する
-  %% 例:
-  %% CLIENT["Client UI"] -->|HTTP /api/play| API["Game API Server"]
-  %% API                 -->|SQL|           DB["GameDB"]
-  %% API                 -->|gRPC Match|    MATCH["MatchMaker"]
-  %% API                 -->|OAuth2|        AUTH["AuthService (外部)"]
+  CLIENT["Client Web App\n(スマホ対応ブラウザ)"]
+  API["WordBook API Server"]
+  DB["WordBookDB\n(Relational or Document DB)"]
+
+  CLIENT -->|HTTP /api/word-books, /api/words, /api/quizzes| API
+  API -->|SQL / Queries| DB
 ```
