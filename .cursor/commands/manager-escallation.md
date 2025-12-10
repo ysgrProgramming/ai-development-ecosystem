@@ -12,7 +12,7 @@
 ## 手順 1: Issue とコメント内容を把握する
 
 1. ユーザーから対象 Issue 番号を受け取る（例: `#42`）。
-2. `gh issue view <issue_number>` で、
+2. `gh-manager issue view <issue_number>` で、
    - タイトル
    - ラベル（`task` / `setup` / `refactor` など）
    - 説明
@@ -52,7 +52,7 @@
    - どの部分の解釈が曖昧か、どのように読むべきかを自分なりに整理する。
 2. 現在の Issue の Requirements / Acceptance Criteria がその解釈とズレている場合、
    - 「どう書き換えるべきか（どの Rn をどう変更するか）」を文章でまとめる。
-3. 軽微な修正であれば、`gh issue edit` とコメントを使い、
+3. 軽微な修正であれば、`gh-manager issue edit` とコメントを使い、
    - Requirements / Acceptance Criteria を直接更新し、
    - 「どのような前提で実装を進めてほしいか」をコメントで明示する。
 4. 大きめの設計変更や docs/ の広範な修正が必要な場合は、

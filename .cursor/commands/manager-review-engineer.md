@@ -12,9 +12,9 @@
 ## 手順 1: PR と関連 Issue を把握する
 
 1. ユーザーから対象 PR 番号を受け取る（例: `#23`）。
-2. `gh pr view <pr_number>` で概要と本文を確認し、
+2. `gh-manager pr view <pr_number>` で概要と本文を確認し、
    - どの Issue を対象としているか（`Closes #<issue_number>` など）を特定する。
-3. 対象 Issue を `gh issue view <issue_number>` で開き、
+3. 対象 Issue を `gh-manager issue view <issue_number>` で開き、
    - タイトル
    - ラベル（`task` / `setup` / `refactor` など）
    - Requirements（R1, R2, ...）
@@ -25,10 +25,10 @@
 
 ## 手順 2: CI 状態の確認
 
-1. `gh pr view <pr_number> --json statusCheckRollup` などで CI 状態を確認する。
+1. `gh-manager pr view <pr_number> --json statusCheckRollup` などで CI 状態を確認する。
 2. テストや Lint が失敗している場合:
    - コードレビューを行う前に、「まず CI を修正してからレビュー」とする。
-   - `gh pr review <pr_number> --request-changes` を実行し、
+   - `gh-manager pr review <pr_number> --request-changes` を実行し、
      - レビューコメントで「CI が失敗しているので、`make test` / `make lint` などを修正してから再度レビュー依頼を出してほしい」ことを伝える。
    - 最後に、Engineer を呼び出すアクションブロックをユーザーに提示する（手順 4-A のブロックを利用）。
 
@@ -40,7 +40,7 @@
    - Issue に書かれた Requirements（R1, R2, ...）が、Self-Walkthrough 内で **明示的に参照されているか** を確認する。
      - 例: 「R1: ◯◯ → 対応コード: ..., テスト: ...」のように、Rn ごとの対応が書かれているか。
    - 対応が曖昧、または一部の Rn が言及されていない場合は、その点を修正要求候補としてメモしておく。
-2. `gh pr diff <pr_number>` や `git diff` でコード差分を確認する：
+2. `gh-manager pr diff <pr_number>` や `git diff` でコード差分を確認する：
    - 各 Requirement（R1, R2, ...）が、実装の変更点とテストで実際に満たされているか。
    - Issue の Acceptance Criteria と差分内容が対応しているか。
    - docs/（`docs/REQUIREMENT.md`, `docs/USE_CASES.md` など）に書かれた要件・制約と矛盾していないか。
@@ -61,7 +61,7 @@
    - どの Acceptance Criteria が満たされていないか。
    - どのコードが docs/ や Issue の意図とズレているか。
    - Self-Walkthrough の説明が不十分 / 曖昧な点。
-2. `gh pr review <pr_number> --request-changes` を実行し、
+2. `gh-manager pr review <pr_number> --request-changes` を実行し、
    - 上記の内容をレビューコメントとして添付する。
 3. ユーザーに、Engineer を呼び出すためのアクションブロックを提示する：
 
@@ -77,7 +77,7 @@
 
 ### 4-B. 問題がない場合（Approved）
 
-1. `gh pr review <pr_number> --approve` を実行する。
+1. `gh-manager pr review <pr_number> --approve` を実行する。
 2. 必要であれば、「Acceptance Criteria を満たしており、docs/ とも矛盾がない」ことを短くコメントする。
 3. ユーザーに、PR をマージし、次のタスクへ進むためのアクションブロックを提示する：
 

@@ -45,7 +45,7 @@
 3. 上記を踏まえて、次のようなコマンドを想定する（実際の実行はユーザーまたは別フロー）：
 
    ```sh
-   gh issue create \
+   gh-manager issue create \
      --template setup.md \
      --title "[SETUP] プロジェクト初期セットアップと ROADMAP 初期化" \
      --label setup

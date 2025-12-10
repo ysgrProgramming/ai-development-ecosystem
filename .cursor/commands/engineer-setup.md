@@ -12,7 +12,7 @@
 ## 手順 1: Issue を読み、ブランチを切る
 
 1. 対象 Issue 番号をユーザーから受け取る（例: `#12`）。
-2. `gh issue view <issue_number>` の内容を読み、
+2. `gh-engineer issue view <issue_number>` の内容を読み、
    - タイトル
    - 概要
    - Requirements
@@ -53,7 +53,7 @@
 1. 変更内容を commit する。
    - メッセージ例: `"Setup project tooling for issue #<issue_number>"`.
 2. ブランチを push する。
-3. `gh pr create` を実行し、本文に必ず次を含める：
+3. `gh-engineer pr create` を実行し、本文に必ず次を含める：
    - `Closes #<issue_number>`
    - この PR で実施した Setup 内容（Makefile・テスト・Lint/Format・CI・ROADMAP など）の要約
    - Acceptance Criteria と、どのコマンドで確認したかの対応（簡潔でよい）

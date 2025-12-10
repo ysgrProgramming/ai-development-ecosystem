@@ -13,9 +13,9 @@
 ## 手順 1: 状況の確認
 
 1. 直前に自分がレビューし、ユーザーにマージしてもらった Engineer PR（例: `#32`）を前提とする。
-2. 必要に応じて `gh pr view <pr_number>` で概要を確認し、
+2. 必要に応じて `gh-manager pr view <pr_number>` で概要を確認し、
    - `Closes #<issue_number>` などから、どの Issue が解決されたかを特定する。
-3. `gh issue view <issue_number>` を見て、
+3. `gh-manager issue view <issue_number>` を見て、
    - その Issue の種類（`setup` / `task` / `refactor` など）と、
    - どういう範囲が完了したのかを簡単に把握する。
 
@@ -23,7 +23,7 @@
 
 ## 手順 2: バックログの確認と必要に応じた次マイルストーン設計
 
-1. `gh issue list` を用いて、まだ open の Issue を確認する。
+1. `gh-manager issue list` を用いて、まだ open の Issue を確認する。
    - 特に `task` / `setup` / `refactor` などのラベル付き Issue を見る。
 2. 「今すぐ着手できる Issue が存在するか」で分岐する：
    - **A. 今すぐ着手できる Issue が存在する場合**
@@ -35,7 +35,7 @@
           - 例: 「ゲームの基本プレイが最後までできる」「設定画面を整える」など。
        3. そのマイルストーンを構成する Issue を 3〜5 件程度に分解する：
           - 各 Issue に、タイトル / 短い説明 / Acceptance Criteria を含める。
-       4. `gh issue create` を想定して、これらの Issue を順に登録する（ラベルも付与する）。
+       4. `gh-manager issue create` を想定して、これらの Issue を順に登録する（ラベルも付与する）。
 
 ---
 

@@ -12,7 +12,7 @@
 ## 手順 1: Issue を読み、ブランチを切る
 
 1. 対象 Issue 番号をユーザーから受け取る（例: `#12`）。
-2. `gh issue view <issue_number>` の内容を読み、
+2. `gh-engineer issue view <issue_number>` の内容を読み、
    - タイトル
    - 説明
    - Acceptance Criteria
@@ -65,7 +65,7 @@
      - どの Acceptance Criteria を、どのテストとどの実装で満たしたかの対応表
        - 例:
          - AC1 → `tests/xxx.test.ts` の `<test name>` → `src/yyy.ts` の `<function>`
-4. `gh pr create` を実行し、上記の本文を指定して PR を作成する（`--body` または `--body-file` を使用）。
+4. `gh-engineer pr create` を実行し、上記の本文を指定して PR を作成する（`--body` または `--body-file` を使用）。
 
 5. PR を作成したら、ユーザーに「PR 番号」と「次に Manager を呼び出すためのプロンプト」を含むアクションブロックを表示する（例）:
 
