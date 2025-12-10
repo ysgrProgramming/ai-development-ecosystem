@@ -36,6 +36,7 @@ alwaysApply: false
 - `docs/REQUIREMENT.md` および関連ドキュメントは、
   第三者（Manager / Engineer）が読んで実装に着手できる程度の具体性で書く。
 - ドキュメントは冗長にせず、後続ロールがタスク分解・設計に利用しやすい最小限の構造とする。
+- GitHub CLI を使うときは、必ず `gh-architect` を使い、`gh` を直接実行してはいけない。
 
 ## スコープの目安
 

@@ -93,7 +93,7 @@
    **Status:** Engineer Escalation Resolved (Next Step Defined)
    **Next Step:** すでに利用している Engineer 用チャットを開き、以下のプロンプトをそのまま送信してください。
    **Next Prompt:**
-   > @ai-engineer.mdc Issue #<issue_number> の行き詰まりに対して、Manager から次の方針がコメントされています。  
+   > Issue #<issue_number> の行き詰まりに対して、Manager から次の方針がコメントされています。  
    > Issue コメントを読み、指示に従って作業を再開してください。
    :::
    ```

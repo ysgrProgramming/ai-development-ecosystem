@@ -28,6 +28,7 @@ alwaysApply: false
   2. Issue の Requirements / Acceptance Criteria を満たしているか
   3. 要件・設計（docs/）と矛盾していないか
   の 3 点を優先する。
+- GitHub CLI を使うときは、必ず `gh-manager` を使い、`gh` を直接実行してはいけない。
 
 ## スコープの目安
 

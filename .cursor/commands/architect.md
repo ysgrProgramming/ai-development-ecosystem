@@ -45,10 +45,10 @@
    - ユーザーが「この要件で問題ない」と回答したら、ドキュメント変更用の PR を作成する。
    - 手順の要点:
      - docs/ 配下の変更をステージングし、コミットして、リモートにプッシュする。
-     - すでに用意されている `.github/PULL_REQUEST_TEMPLATE/architect_requirements.md` を PR 本文として利用し、`gh pr create` で PR を作成する:
+     - すでに用意されている `.github/PULL_REQUEST_TEMPLATE/architect_requirements.md` を PR 本文として利用し、`gh-architect pr create` で PR を作成する:
 
        ```sh
-       gh pr create \
+       gh-architect pr create \
         --title "Define project requirements and design docs" \
         --body-file .github/PULL_REQUEST_TEMPLATE/architect_requirements.md
        ```
